@@ -1,0 +1,80 @@
+body,html {
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 320px;
+    max-width: 88%;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #212121;
+    
+}
+
+.logo-wrapper {
+    z-index: 1;
+    position: relative;
+    background-color: #212121;
+    
+}
+
+svg {
+    display: block;
+    width: 246px;
+    path {
+        backface-visibility: hidden;
+    }
+}
+
+#new {
+    display: none;
+}
+
+audio {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+// .car-frame {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100vh;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: flex-start;
+// }
+#car {
+    position: absolute;
+    left: -190px;
+    bottom: 0;
+    width: 230px;
+    transform: rotate(-18deg) scale(.6);
+}
+
+#date {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    display: inline-block;
+    margin-top: 10px;
+    width: 100%;
+    visibility: hidden;
+    transform: scale3d(.75, .75, .75);
+}
+
+// #car.flip {
+// 	transform: rotate(18deg) scale3d(-.9, .9, .9);
+// }
