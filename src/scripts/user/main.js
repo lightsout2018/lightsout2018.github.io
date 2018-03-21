@@ -32,7 +32,7 @@
         // })
         .to(
             ".old-path",
-            .6, {
+            .5, {
                 fill: "#ed1f24",
                 ease: Sine.easeOut,
                 morphSVG: {
@@ -45,7 +45,7 @@
                 scale: 1,
                 autoAlpha: 1
             },
-            "+=2"
+            "+=1.9"
         );
     // elLogo.addEventListener("mouseup", function () {
     // setTimeout(function () {
