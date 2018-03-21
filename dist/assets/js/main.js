@@ -47,8 +47,9 @@ this._uncache(!1)),this._pauseTime=a?b:null,this._paused=a,this._active=this.isA
     const elLogo = document.getElementById("logo");
     const elCar = document.getElementById("car");
     const elDate = document.getElementById("date");
-    const audio = new Audio('f1.mp3');
-    
+    var loaded = false;
+    var aud = new Audio();
+
     const tlLogo = new TimelineMax({
         paused: true
     });
@@ -71,20 +72,29 @@ this._uncache(!1)),this._pauseTime=a?b:null,this._paused=a,this._active=this.isA
             "-=1"
         )
         .to(elDate, 1.2, {
-            scale: 1,
-            autoAlpha: 1
-        },
-        "+=2"
-    );
-        // elLogo.addEventListener("mouseup", function () {
-            setTimeout(function(){
-            tlLogo.play(0);
-            audio.play();
-        }, 1000);
+                scale: 1,
+                autoAlpha: 1
+            },
+            "+=2"
+        );
+    // elLogo.addEventListener("mouseup", function () {
+    // setTimeout(function () {
+        //     tlLogo.play(0);
+        //     audio.play();
+        // }, 1000);
+        
+        aud.addEventListener('loadeddata', function () {
+            setTimeout(function () {
+                loaded = true;
+                aud.play();
+                tlLogo.play(0);        
+                }, 500);
+    }, false);
+
+    aud.src = 'f1.mp3';
+    // elLogo.addEventListener("mouseleave", function () {
+    //     // tlLogo.reverse();
     // });
-    elLogo.addEventListener("mouseleave", function () {
-        // tlLogo.reverse();
-    });
 
 }());
 
