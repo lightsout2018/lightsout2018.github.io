@@ -15,6 +15,7 @@
 (function () {
     'use strict';
     const elLogo = document.getElementById("logo");
+    const elLogoWrapper = document.getElementById("logo-wrapper");
     const elCar = document.getElementById("car");
     const elDate = document.getElementById("date");
     var loaded = false;
@@ -30,22 +31,28 @@
         //     x: 600,
         //     ease: Power0.easeNone
         // })
+        .to(elLogoWrapper, 5, {
+                scale: 1
+                // ease: Power0.easeNone
+            }
+        )
         .to(
             ".old-path",
-            .55, {
+            0.85, {
                 fill: "#ed1f24",
                 ease: Sine.easeOut,
                 morphSVG: {
                     shape: ".new-path"
                 }
             },
-            "-=1"
+            "-=3.85"
         )
+
         .to(elDate, 1.2, {
                 scale: 1,
                 autoAlpha: 1
             },
-            "+=1.95"
+            "-=2.15"
         );
     // elLogo.addEventListener("mouseup", function () {
     // setTimeout(function () {

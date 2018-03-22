@@ -22,16 +22,18 @@ body,html {
     
 }
 
-.logo-wrapper {
+#logo-wrapper {
     z-index: 1;
     position: relative;
     background-color: #212121;
-    
+        will-change: transform;
+    transform: scale3d(.75,.75,.75);
 }
 
 svg {
     display: block;
     width: 246px;
+    backface-visibility: hidden;
     path {
         backface-visibility: hidden;
     }
@@ -73,6 +75,8 @@ audio {
     margin-top: 10px;
     width: 100%;
     visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
     transform: scale3d(.75, .75, .75);
 }
 
