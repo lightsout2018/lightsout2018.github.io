@@ -62,7 +62,7 @@ this._uncache(!1)),this._pauseTime=a?b:null,this._paused=a,this._active=this.isA
         // })
         .to(
             ".old-path",
-            .65, {
+            .55, {
                 fill: "#ed1f24",
                 ease: Sine.easeOut,
                 morphSVG: {
@@ -75,7 +75,7 @@ this._uncache(!1)),this._pauseTime=a?b:null,this._paused=a,this._active=this.isA
                 scale: 1,
                 autoAlpha: 1
             },
-            "+=2.05"
+            "+=1.95"
         );
     // elLogo.addEventListener("mouseup", function () {
     // setTimeout(function () {
